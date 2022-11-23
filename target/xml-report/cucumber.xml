@@ -1,55 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="48.648">
-    <testcase classname="US1010 liste olarak verilen wrong user ile negatif login testi" name="_2" time="15.898">
-        <system-out>
-            <![CDATA[Given Kullanici "myUrl" anasayfaya gider....................................passed
-And myCourse cookies i tiklar...............................................passed
-Then myCourse anasayfa login linkine tiklar.................................passed
-And myCourse kullanici adi olarak "myYanlisEmail1" girer....................passed
-And myCourse password olarak "myYanlisPassword1" girer......................passed
-Then myCourse login butonuna basar..........................................passed
-And myCourse giris yapilamadigini test eder.................................passed
-Then Sayfayi kapatir........................................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.942">
+    <testcase classname="US1002_Amazon Arama Testi" name="TC04 kullanıcı amazonda Apple aramasi yapar" time="24.171">
+        <failure message="" type="java.lang.AssertionError">
+            <![CDATA[Given Kullanici amazon anasayfaya gider.....................................passed
+Then arama kutusuna Apple yazip aratir......................................passed
+Then sonuclarin Apple içerdiigni test eder..................................failed
+And Sayfayi kapatir.........................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.AmazonStepDefinitions.sonuclarin_apple_icerdigini_test_eder(AmazonStepDefinitions.java:69)
+	at ✽.sonuclarin Apple içerdiigni test eder(file:///C:/Users/mesut/IdeaProjects/com.CucumberFall2022/src/test/resources/features/US1002_AmazonAramaTesti.feature:24)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1010 liste olarak verilen wrong user ile negatif login testi" name="_3" time="10.923">
-        <system-out>
-            <![CDATA[Given Kullanici "myUrl" anasayfaya gider....................................passed
-And myCourse cookies i tiklar...............................................passed
-Then myCourse anasayfa login linkine tiklar.................................passed
-And myCourse kullanici adi olarak "myYanlisEmail2" girer....................passed
-And myCourse password olarak "myYanlisPassword2" girer......................passed
-Then myCourse login butonuna basar..........................................passed
-And myCourse giris yapilamadigini test eder.................................passed
-Then Sayfayi kapatir........................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1010 liste olarak verilen wrong user ile negatif login testi" name="_4" time="11.02">
-        <system-out>
-            <![CDATA[Given Kullanici "myUrl" anasayfaya gider....................................passed
-And myCourse cookies i tiklar...............................................passed
-Then myCourse anasayfa login linkine tiklar.................................passed
-And myCourse kullanici adi olarak "myYanlisEmail3" girer....................passed
-And myCourse password olarak "myYanlisPassword3" girer......................passed
-Then myCourse login butonuna basar..........................................passed
-And myCourse giris yapilamadigini test eder.................................passed
-Then Sayfayi kapatir........................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="US1010 liste olarak verilen wrong user ile negatif login testi" name="_5" time="10.014">
-        <system-out>
-            <![CDATA[Given Kullanici "myUrl" anasayfaya gider....................................passed
-And myCourse cookies i tiklar...............................................passed
-Then myCourse anasayfa login linkine tiklar.................................passed
-And myCourse kullanici adi olarak "myYanlisEmail4" girer....................passed
-And myCourse password olarak "myYanlisPassword4" girer......................passed
-Then myCourse login butonuna basar..........................................passed
-And myCourse giris yapilamadigini test eder.................................passed
-Then Sayfayi kapatir........................................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>

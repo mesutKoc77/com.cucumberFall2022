@@ -17,7 +17,7 @@ Feature: US1002_Amazon Arama Testi
     Then arama kutusuna Java yazip aratir
     Then arama sonuclarının Java içerdigini test eder
     And Sayfayi kapatir
-
+@apple
   Scenario: TC04 kullanıcı amazonda Apple aramasi yapar
     Given Kullanici amazon anasayfaya gider
     Then arama kutusuna Apple yazip aratir
