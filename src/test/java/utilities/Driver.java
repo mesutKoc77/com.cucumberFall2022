@@ -30,7 +30,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver =new ChromeDriver();
                     break;
-                case "penceresiz chrome":
+                case "headless_chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options=new ChromeOptions();
                     options.addArguments("window-size=1400,600");
@@ -41,7 +41,7 @@ public class Driver {
                     WebDriverManager.firefoxdriver().setup();
                     driver=new FirefoxDriver();
                     break;
-                case "penceresiz firefox":
+                case "headless_firefox":
                     WebDriverManager.firefoxdriver().setup();
                     FirefoxOptions options2=new FirefoxOptions();
                     options2.addArguments("window-size=1400,600");

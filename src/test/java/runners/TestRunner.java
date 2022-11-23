@@ -12,12 +12,21 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@myCourse",
+        tags = "@wip",
         dryRun = false
 )
 
 public class TestRunner {
     /*
+    *************************"
+    once feature da benden istenenleri yazarım
+    bu feature in ustune "@wip" tagını eklerim
+    buradaki tags ismini de yukarıdaki ile aynı yaparım
+    bana eksik olan adımları gostermesi için dryRun ı true yaparim.
+    eksikleri bulduktan sonra tekrar dryRun ı false yaparak işlemden çıkarım
+
+    *******************
+    daha sonra buraya gelir dryRun i true yaparım
     Bir framework'de bir tek Runner class'i yeterli olabilir
     Runner class'inda class body'sinde hic bir sey olmaz
     Runner class'imizi onemli yapan 2 adet annotaion vardir

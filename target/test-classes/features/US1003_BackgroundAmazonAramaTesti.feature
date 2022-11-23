@@ -17,7 +17,6 @@ Feature: US1003 Background kullanarak amazon arama testi
     And Sayfayi kapatir
 
 
-  @apple
   Scenario: TC07 kullanıcı amazonda Apple aramasi yapar
     Then arama kutusuna Apple yazip aratir
     Then sonuclarin Apple içerdiigni test eder

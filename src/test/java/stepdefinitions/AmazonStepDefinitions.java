@@ -84,6 +84,7 @@ public class AmazonStepDefinitions {
 
     }
 
+
     @Given("Kullanici {string} anasayfaya gider")
     public void kullaniciAnasayfayaGider(String istenenUrl) {
         Driver.getdriver().get(ConfigReader.getProperty(istenenUrl));
@@ -94,4 +95,6 @@ public class AmazonStepDefinitions {
         String actualUrl = Driver.getdriver().getCurrentUrl();
         Assert.assertTrue(actualUrl.contains(istenenKelime));
     }
+
+
 }
