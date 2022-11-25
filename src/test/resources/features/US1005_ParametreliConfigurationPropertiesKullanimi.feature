@@ -4,7 +4,7 @@ Feature: US1005 Parametreli Configuration.properties Kullanimi
   #3 farklı senaryo oluşturup
   #amazon, mycoursedemy ve wisequarter anasayfalarına gidip
   #url in bu kelimleri içerdigini test edin
-
+  @pt2
   Scenario: TC09 kullanici amazon sayfasina gidebilmeli
     Given Kullanici "arabamUrl" anasayfaya gider
     Then url'in "araba" icerdigini test eder
