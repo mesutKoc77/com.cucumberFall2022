@@ -6,11 +6,14 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AutomationPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 
 public class AutomationStepdefinitions {
 
     AutomationPage automationPage = new AutomationPage();
+
+
 
     @Given("user signUp linkine tiklar")
     public void user_sign_up_linkine_tiklar() {

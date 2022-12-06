@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,13 +23,16 @@ public class MyCoursedemyStepdefinitions {
     }
 
     @Then("myCourse kullanici adi olarak {string} girer")
+
     public void my_course_kullanici_adi_olarak_girer(String verilenEmail) {
+
         mycoursedemyPage.emailKutusu.sendKeys(ConfigReader.getProperty(verilenEmail));
 
     }
 
     @Then("myCourse password olarak {string} girer")
     public void my_course_password_olarak_girer(String verilenPassword) {
+
         mycoursedemyPage.passwordKutusu.sendKeys(ConfigReader.getProperty(verilenPassword));
 
     }
@@ -52,6 +56,7 @@ public class MyCoursedemyStepdefinitions {
 
     @And("myCourse login butonu tiklanabilir olana kadar bekler")
     public void mycourseLoginButonuTiklanabilirOlanaKadarBekler() {
+
         wait.until(ExpectedConditions.elementToBeClickable(mycoursedemyPage.loginButonu));
 
     }
@@ -65,4 +70,6 @@ public class MyCoursedemyStepdefinitions {
     public void mycourseGirisYapilamadiginiTestEder() {
         Assert.assertTrue(mycoursedemyPage.loginLinki.isDisplayed());
     }
+
+
 }

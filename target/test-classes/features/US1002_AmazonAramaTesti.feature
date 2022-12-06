@@ -1,9 +1,7 @@
-
-
 Feature: US1002_Amazon Arama Testi
   # Kullanıcının arama yapması için uc seneryo oluşturun.
   # Nutella, Java ve Apple için arama yapıp sonuçların aranan kelime içierdigini test edin
-  @pt1
+
   Scenario: TC02 Kullanici amazonda Nutella aramasi yapar
 
     Given Kullanici amazon anasayfaya gider
@@ -23,3 +21,10 @@ Feature: US1002_Amazon Arama Testi
     Then arama kutusuna Apple yazip aratir
     Then sonuclarin Apple içerdiigni test eder
     And Sayfayi kapatir
+
+    @jjjj
+    Scenario: TC05 kullanıcı amazonda laptop aramasi yapar
+      Given Kullanici amazon anasayfaya gider
+      Then arama kutusuna laptop yazip aratir
+      Then sonuclarin laptop icerdigini test eder
+      Given Sayfayi kapatir

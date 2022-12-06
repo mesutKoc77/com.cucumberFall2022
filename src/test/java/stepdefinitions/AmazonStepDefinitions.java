@@ -1,3 +1,4 @@
+
 package stepdefinitions;
 
 import io.cucumber.java.en.And;
@@ -11,6 +12,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class AmazonStepDefinitions {
+
     AmazonPage amazonPage = new AmazonPage();
 
     @Given("Kullanici amazon anasayfaya gider")
@@ -19,6 +21,7 @@ public class AmazonStepDefinitions {
 
 
     }
+
 
     @When("Arama cubuguna Nutella yazip aratir")
     public void arama_cubuguna_nutella_yazip_aratir() {
@@ -40,11 +43,11 @@ public class AmazonStepDefinitions {
 
     }
 
+
     @Then("arama kutusuna Java yazip aratir")
     public void aramaKutusunaJavaYazipAratir() {
         amazonPage.aramaKutusu.sendKeys("Java" + Keys.ENTER);
     }
-
 
     @Then("arama sonuclarının Java içerdigini test eder")
     public void arama_sonuclarinin_java_icerdigini_test_eder() {
@@ -53,7 +56,6 @@ public class AmazonStepDefinitions {
         Assert.assertTrue(sonucElementiText.contains(expectedKelime));
 
     }
-
 
     @Then("arama kutusuna Apple yazip aratir")
     public void arama_kutusuna_apple_yazip_aratir() {
@@ -70,23 +72,13 @@ public class AmazonStepDefinitions {
 
     }
 
-    @Then("Arama cubuguna {string} yazip aratir")
-    public void aramaCubugunaYazipAratir(String istenenKelime) {
-        amazonPage.aramaKutusu.sendKeys(istenenKelime + Keys.ENTER);
 
 
-    }
-
-    @And("Arama sonuclarinin {string} icerdigini test eder")
-    public void aramaSonuclarininIcerdiginiTestEder(String istenenKelime) {
-        String actualAramaSonucu = amazonPage.aramaSonucElementi.getText();
-        Assert.assertTrue(actualAramaSonucu.contains(istenenKelime));
-
-    }
 
 
     @Given("Kullanici {string} anasayfaya gider")
     public void kullaniciAnasayfayaGider(String istenenUrl) {
+
         Driver.getdriver().get(ConfigReader.getProperty(istenenUrl));
     }
 
@@ -97,4 +89,52 @@ public class AmazonStepDefinitions {
     }
 
 
+    @Then("arama kutusuna laptop yazip aratir")
+    public void aramaKutusunaLaptopYazipAratir() {
+        amazonPage.aramaKutusu.sendKeys("laptop" + Keys.ENTER);
+    }
+
+
+    @Then("sonuclarin laptop icerdigini test eder")
+    public void sonuclarinLaptopIcerdiginiTestEder() {
+
+        String sonucElementiText = amazonPage.aramaSonucElementi.getText();
+        String expectedKelime = "laptop";
+        Assert.assertTrue(sonucElementiText.contains(expectedKelime));
+
+    }
+
+
+    @Then("Arama Cubuguna Tiklar")
+    public void aramaCubugunaTiklar() {
+        amazonPage.aramaKutusu.click();
+    }
+
+
+    @And("Arama sonuclarinin {string} icerdigini test eder")
+    public void aramaSonuclarininIcerdiginiTestEder(String testEdilecekUrunAdi) {
+        String aramaSonucumuz = amazonPage.aramaSonucElementi.getText();
+        Assert.assertTrue(aramaSonucumuz.contains(testEdilecekUrunAdi));
+
+
+    }
+
+
+    @Then("Arama cubuguna {string} yazip aratir")
+    public void aramaCubugunaYazipAratir(String istenenKelime) {
+
+        amazonPage.aramaKutusu.sendKeys(istenenKelime + Keys.ENTER);
+
+
+    }
+
+    @Given("Kullanici {string} aratir")
+    public void kullaniciAratir(String kelime) {
+        amazonPage.aramaKutusu.sendKeys(kelime+Keys.ENTER);
+
+    }
+
+
+
 }
+

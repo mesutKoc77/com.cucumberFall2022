@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@pt1",
+        tags = "@pazar",
         dryRun = false
 )
 
@@ -49,3 +49,4 @@ public class TestRunner1 {
 
      */
 }
+

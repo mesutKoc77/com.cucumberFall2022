@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="4.219">
+    <testcase classname="JDBC03 Kullanici database'de update yapabilmeli" name="TC03 kullanici id degeri ile istedigi soyismi update ettigini test eder" time="3.541">
+        <system-out>
+            <![CDATA[Given Kullanici JDBC ile database'e baglanir................................passed
+Then id degeri 14 olan kisinin "last_name" degerini "happiness" yapar.......passed
+And id si 14 olan kisinin "last_name" degerinin "happiness" oldugunu test eder.passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

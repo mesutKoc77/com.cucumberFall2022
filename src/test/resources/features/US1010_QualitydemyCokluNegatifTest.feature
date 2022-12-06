@@ -1,6 +1,6 @@
-Feature: US1010 liste olarak verilen wrong user ile negatif login testi
+Feature: US1010 liste olarak verilen wrong user Email ve wrong Password ile negatif login testi
 
-  Scenario Outline:
+  Scenario Outline: Verilen
     Given Kullanici "myUrl" anasayfaya gider
     And myCourse cookies i tiklar
     Then myCourse anasayfa login linkine tiklar
@@ -11,10 +11,11 @@ Feature: US1010 liste olarak verilen wrong user ile negatif login testi
     Then Sayfayi kapatir
 
     Examples:
-    |istenenEmail|istenenPassword|
+    |istenenEmail  |istenenPassword  |
     |myYanlisEmail1|myYanlisPassword1|
     |myYanlisEmail2|myYanlisPassword2|
     |myYanlisEmail3|myYanlisPassword3|
     |myYanlisEmail4|myYanlisPassword4|
+
 
 

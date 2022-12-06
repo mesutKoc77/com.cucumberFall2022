@@ -47,11 +47,12 @@ public class HerokuappStepdefinitions {
 
     @Then("Herokuapp Delete butonunun gorunmedigini test eder")
     public void herokuapp_delete_butonunun_gorunmedigini_test_eder() {
-        boolean flag = false;
+
+        boolean isDeleteButtonNotAppearing = false;
         try {
             Assert.assertFalse(herokuappPage.deleteButton.isDisplayed());
         } catch (Exception e) {
-            flag=true;
+            isDeleteButtonNotAppearing=true;
         }
         /*
         ben no suc element exception ı buldugum an evet bu benim istedigim sonuc
@@ -60,7 +61,7 @@ public class HerokuappStepdefinitions {
         //yukaırda  Assert.assertTrue(herokuappPage.deleteButton.isDisplayed());
         da diyebilirsin
          */
-        Assert.assertTrue(flag);
+        Assert.assertTrue(isDeleteButtonNotAppearing);
 
 
     }
